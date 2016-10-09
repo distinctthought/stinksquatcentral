@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Unlike a LinearLayout, a TableLayout organizes content in rows. Within each row, each bit of content starts a new column.
+    Not exactly sure what stretchColumns does, but it had to be specified...-->
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,8 +13,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.woof.stinksquatcentral">
-
+    <!--Initialize a new row-->
     <TableRow>
+        <!--Notice these TextViews each have an id so that I can modify them programatically.-->
         <TextView
             android:id="@+id/dates"
             android:layout_width="wrap_content"
@@ -20,6 +23,7 @@
             android:textColor="#FFFFFF"
             android:text="@string/past_button"
         />
+        <!--Second TextView in same TableRow creates new column by default.-->
         <TextView
             android:id="@+id/customers"
             android:layout_width="wrap_content"

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--A linear layout arranges all content boxes in a vertical or horizontal line, as set by android:orientation.
+    "match-parent" for width and height makes sure the app fills the screen of any device.
+    #1F282D is the hex code for space blue. Feel free to change the colors.
+    Padding makes sure that content doesn't run into the edge of the screen. To change the padding, go to dimens.xml in the values directory. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +14,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.woof.stinksquatcentral">
-
+    <!--A text view displays text.
+        "wrap_content" makes it so the "box" containing the text view is just large enough to contain (or wrap) the content.
+        android:text defines the content of the TextView. I've referenced a string in the values/strings.xml file, as is good practice.
+        FFFFFF is the hex code for white.
+        Padding and textSize are defined in dp, which I think stands for "dynamic pixels."
+            I think 1 dp = 1 pixel for a 160 dpi (dot per inch) pixel screen, 1 dp = 1.5 pixel on 240 dpi screen, etc.
+            So it defines spaces and sizes using a pixel value that is corrected to account for different resolutions.
+            There are other ways to set size, but dp is the one that's always used.
+            *It would be best practice to reference values contained in values/dimens.xml for the textSize and padding values, so I'll fix that later (or you can!).-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,7 +33,7 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         />
-
+    <!--Second TextView is displayed below first one since they are in a vertical LinearLayout.-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,9 +43,14 @@
         android:textSize="16dp"
         android:paddingTop="10dp"
         android:paddingBottom="20dp"/>
-
+    <!--It's a button.
+        For Buttons and TextViews and pretty much all xml elements, it is possible to define an id.
+        The id makes it possible to use the button programatically (from the java code).
+        The first time you define the id, you use the '+' symbol to add it to...something...I sort of forgot what.
+        android:onClick specifies what to do when the button is clicked
+        "startPastActivity" and "startFutureActivity" are names of functions in MainActivity.java-->
     <Button
-        android:id="@+id/evolution_button"
+        android:id="@+id/past_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -41,7 +58,7 @@
         android:onClick="startPastActivity"/>
 
     <Button
-        android:id="@+id/powerup_button"
+        android:id="@+id/future_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

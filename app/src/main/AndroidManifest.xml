@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.woof.stinksquatcentral">
-
+    <!--All of this is pretty much default-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,9 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--Addition of each class that extends activity to the manifest is required.-->
         <activity android:name=".PastLaunches" />
         <activity android:name=".FutureMissions"></activity>
     </application>
+    <!--Allows access to SpaceX website. Required permissions are always specified in the manifest. -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
