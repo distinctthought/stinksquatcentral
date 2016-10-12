@@ -5,15 +5,16 @@
     Padding makes sure that content doesn't run into the edge of the screen. To change the padding, go to dimens.xml in the values directory. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
     android:background="#1F282D"
-    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.woof.stinksquatcentral">
+    tools:context="com.example.woof.stinksquatcentral"
+    android:weightSum="1"
+    android:orientation="vertical">
     <!--A text view displays text.
         "wrap_content" makes it so the "box" containing the text view is just large enough to contain (or wrap) the content.
         android:text defines the content of the TextView. I've referenced a string in the values/strings.xml file, as is good practice.
@@ -29,39 +30,58 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/main_instruction"
         android:textColor="#FFFFFF"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        />
-    <!--Second TextView is displayed below first one since they are in a vertical LinearLayout.-->
+        android:id="@+id/textView" />
+
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+<Button
+    android:id="@+id/future_button"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:text="@string/future_button"
+    android:onClick="startFutureActivity"
+    android:layout_weight="1" />
+
+<Button
+    android:id="@+id/past_button"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:text="@string/past_button"
+    android:onClick="startPastActivity"
+    android:layout_weight = "1"/>
+<Button
+android:layout_width="0dp"
+android:layout_height="fill_parent"
+android:layout_gravity= "center"
+android:text = "News"
+android:onClick ="startPastActivity"
+android:layout_weight = "1"/>
+</LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/countdown"
         android:textColor="#FFFFFF"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:paddingTop="10dp"
-        android:paddingBottom="20dp"/>
+        android:paddingBottom="20dp"
+        android:layout_weight="0.02" />
+
+    <!--Second TextView is displayed below first one since they are in a vertical LinearLayout.-->
     <!--It's a button.
         For Buttons and TextViews and pretty much all xml elements, it is possible to define an id.
         The id makes it possible to use the button programatically (from the java code).
         The first time you define the id, you use the '+' symbol to add it to...something...I sort of forgot what.
         android:onClick specifies what to do when the button is clicked
         "startPastActivity" and "startFutureActivity" are names of functions in MainActivity.java-->
-    <Button
-        android:id="@+id/past_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/past_button"
-        android:onClick="startPastActivity"/>
 
-    <Button
-        android:id="@+id/future_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/future_button"
-        android:onClick="startFutureActivity"/>
 </LinearLayout>

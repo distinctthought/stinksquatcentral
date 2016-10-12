@@ -5,6 +5,6 @@
     <string name="past_button">Past Launches</string>
     <string name="future_button">Future Missions</string>
     <string name="countdown">On September 1, 2016, a Falcon 9 rocket exploded during launch. Future missions have been put on hold while SpaceX investigates the cause of the explosion.
-    When the investigation has concluded, a timer will display the countdown until the next launch.</string>
+    When the investigation has concluded, a timer will display the countdown until the next launch. We will patiently wait for Elon to get his shit together.</string>
     <string name="main_instruction">Welcome to the SpaceX app!</string>
 </resources>

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/StinkSquatCentral.iml" filepath="$PROJECT_DIR$/StinkSquatCentral.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stinksquatcentral.iml" filepath="$PROJECT_DIR$/stinksquatcentral.iml" />
     </modules>
   </component>
 </project>
